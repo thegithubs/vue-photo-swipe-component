@@ -16,7 +16,12 @@ import photoSwipe from './components/photoSwipe.vue'
   :options="options"
   :images="images"
   @init="init"
-/>
+>
+  <div slot="content" class="content" @click="close">点击关闭 自定义索引 {{current}}/{{images.length}}</div>
+  <div slot="prev">prev</div>
+  <div slot="next">next</div>
+</photo-swipe>
+
 v-model是否显示预览组件，布尔值
 options基本设置，参考官网文档
 images图片数组，格式： [{url: 'a.jpg'}, {url: 'b.jpg'},...]
@@ -30,4 +35,10 @@ init(gallery){
     this.current = this.gallery.getCurrentIndex() + 1
   })
 }
+```
+## 插槽
+```
+slot="content" 内容
+slot="prev" 左箭头
+slot="next" 右箭头
 ```
