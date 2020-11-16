@@ -17,8 +17,11 @@ import photoSwipe from './components/photoSwipe.vue'
   :images="images"
   @init="init"
 />
-v-model设置组件显示隐藏，options基本设置 images图片数组，格式： [{url: 'a.jpg'}, {url: 'b.jpg'},...]
-init初始化完成，如下
+v-model是否显示预览组件，布尔值
+options基本设置，参考官网文档
+images图片数组，格式： [{url: 'a.jpg'}, {url: 'b.jpg'},...]
+
+init初始化完成回调，回调之后才能使用api和methos，参考src/App.vue
 init(gallery){
   //gallery返回PhotoSwipe对象，然后可以使用各种API和Methods
   console.log(gallery)
