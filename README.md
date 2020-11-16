@@ -1,6 +1,6 @@
 ### 说明
 ```
-基于photoswipe的预览图组件，API和方法可参考![官网文档](https://photoswipe.com/)
+基于photoswipe的预览图组件，API和方法可参考[!官网文档](https://photoswipe.com/)
 同时扩展了原插件，新增了内容和左右按钮的插槽，方便自定义内容，具体见src/App.vue
 ```
 ## 快速开始
