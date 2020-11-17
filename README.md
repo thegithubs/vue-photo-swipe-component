@@ -1,18 +1,19 @@
 ### 说明
 ```
-基于photoswipe的预览图组件，API和方法可参考[官网文档](https://photoswipe.com/)
-同时扩展了原插件，新增了内容和左右按钮的插槽，方便自定义内容，具体见使用方法
+基于photoswipe的预览图组件，具体见使用方法或参考官网文档 https://photoswipe.com
+同时扩展了原插件，新增了内容和左右按钮的插槽，方便自定义内容
 ```
 ## 安装
 ```
 npm i vue-photo-swipe-thenpmjs
-
 
 ```
 
 ## 使用方法
 ```
 import photoSwipe from 'vue-photo-swipe-thenpmjs'
+
+<div @click="showPhotoSwipe=true">popup</div>
 <photo-swipe
   v-model="showPhotoSwipe"
   :options="options"
@@ -24,23 +25,35 @@ import photoSwipe from 'vue-photo-swipe-thenpmjs'
   <div slot="next">next</div>
 </photo-swipe>
 
-v-model是否显示预览组件，布尔值
-options基本设置，参考官网文档
-images图片数组，格式： [{url: 'a.jpg'}, {url: 'b.jpg'},...]
+v-model  是否显示组件，布尔值
+options  基本设置，{index: 3, escKey: false, ...}
+         更多请参考官网文档 https://photoswipe.com/documentation/options.html
+images   图片数组，格式： [{url: 'a.jpg'}, {url: 'b.jpg'},...]
 
-init初始化完成回调，回调之后才能使用api和methos
+//init初始化完成回调，之后才能使用api和methods
+
 init(gallery){
-  //gallery返回PhotoSwipe对象，然后可以使用各种API和Methods
+  //gallery 返回PhotoSwipe对象，然后可以使用各种API和Methods
   console.log(gallery)
   this.gallery = gallery
+  this.listen()
+},
+listen(){
+  //可以监听多个事件，请参考官网 https://photoswipe.com/documentation/api.html
+  this.gallery.listen('initialZoomIn', () => {
+    console.log('initialZoomIn')
+  })
   this.gallery.listen('afterChange', () => {
     this.current = this.gallery.getCurrentIndex() + 1
   })
+},
+close(){
+  this.gallery.close()
 }
 ```
 ## 插槽
 ```
-slot="content" 内容
-slot="prev" 左箭头
-slot="next" 右箭头
+content  内容
+prev     左箭头
+next     右箭头
 ```
