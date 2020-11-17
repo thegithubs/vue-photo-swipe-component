@@ -1,11 +1,10 @@
 {
   "name": "vue-photo-swipe-component",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.4",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "package": "vue-cli-service build --target lib --name vue-photo-swipe ./src/components/photoSwipe.vue"
+    "package": "vue-cli-service build --target lib --name vue-photo-swipe ./src/main.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -16,13 +15,8 @@
     "@vue/cli-service": "^3.8.0",
     "vue-template-compiler": "^2.6.10"
   },
-  "main": "./dist/vue-photo-swipe.common.js",
-  "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
-  ],
-  "private": false
+  "main": "./index.js",
+  "private": false,
+  "author": "thegithubs",
+  "homepage": "https://github.com/thegithubs/vue-photo-swipe-component"
 }
