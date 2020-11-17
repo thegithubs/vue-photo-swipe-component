@@ -29,11 +29,6 @@ import photoSwipe from 'vue-photo-swipe-thenpmjs'
   <div slot="next">next</div>
 </photo-swipe>
 
-v-model  是否显示组件，布尔值
-options  基本设置，{index: 3, escKey: false, ...}
-         更多请参考官网文档 https://photoswipe.com/documentation/options.html
-images   图片数组，格式： [{url: 'a.jpg'}, {url: 'b.jpg'},...]
-
 //init初始化完成回调，之后才能使用api和methods
 
 init(gallery){
@@ -54,6 +49,19 @@ listen(){
 close(){
   this.gallery.close()
 }
+```
+## 属性
+```
+v-model  是否显示组件，布尔值
+options  基本设置，{index: 3, escKey: false, ...}
+         更多请参考官网文档 https://photoswipe.com/documentation/options.html
+images   图片数组，格式： [{url: 'a.jpg'}, {url: 'b.jpg'},...]
+
+```
+## 事件和方法
+```
+init     初始化后执行， 返回参数PhotoSwipe对象
+         更多请参考官网 https://photoswipe.com/documentation/api.html
 ```
 ## 插槽
 ```
