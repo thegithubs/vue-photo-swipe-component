@@ -7,10 +7,9 @@ NPM地址 https://www.npmjs.com/package/vue-photo-swipe-thenpmjs
 ## 安装
 ```
 npm i vue-photo-swipe-thenpmjs
-
 ```
 
-## 使用方法
+## 开始使用
 ```
 import photoSwipe from 'vue-photo-swipe-thenpmjs'
 
@@ -60,8 +59,8 @@ images   图片数组，格式： [{url: 'a.jpg'}, {url: 'b.jpg'},...]
 ```
 ## 事件和方法
 ```
-init     初始化后执行， 返回参数PhotoSwipe对象
-         更多请参考官网 https://photoswipe.com/documentation/api.html
+init     初始化后执行， 回调参数PhotoSwipe对象
+         其他的请参考官网 https://photoswipe.com/documentation/api.html
 ```
 ## 插槽
 ```
