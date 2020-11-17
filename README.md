@@ -5,7 +5,7 @@
 ```
 ## 快速开始
 ```
-import photoSwipe from './components/photoSwipe.vue'
+import photoSwipe from 'vue-photo-swipe-thenpmjs'
 
 ```
 
