@@ -21,7 +21,10 @@ import photoSwipe from 'vue-photo-swipe-thenpmjs'
   :images="images"
   @init="init"
 >
-  <div slot="content" class="content" @click="close">点击关闭 自定义索引 {{current}}/{{images.length}}</div>
+  <div slot="content">
+    <div @click="close">点击关闭</div>
+    <div>自定义索引 {{current}}/{{images.length}}</div>
+  </div>
   <div slot="prev">prev</div>
   <div slot="next">next</div>
 </photo-swipe>
